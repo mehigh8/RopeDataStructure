@@ -1,29 +1,29 @@
-Bloțiu Mihnea-Andrei & Roșu Mihai-Cosmin 
-313CA - Rope data structure - 03.06.2021
+<b>Bloțiu Mihnea-Andrei & Roșu Mihai-Cosmin 
+313CA - Rope data structure - 03.06.2021</b>
 
 Pentru realizarea am completat funcțiile necesare din fișierul rope.c și
 am adăugat câteva în plus pentru buna modularizare a codului.
 
-makeRopeNode:
+<b>makeRopeNode:</b>
  - Am alocat memoria pentru un nod;
  - Am verificat dacă memoria a fost alocată cu succes;
  - Am inițializat copii nodului ca fiind NULL;
  - Greutatea egală cu lungimea șirului;
  - Am setat pointer-ul nodului spre string-ul primit;
  
-makeRopeTree:
+<b>makeRopeTree:</b>
  - Am alocat memoria pentru un rope;
  - Am verificat dacă memoria a fost alocată cu succes;
  - Am inițializat rădăcina rope-ului ca fiind cea primită;
 
-concat:
+<b>concat:</b>
  - Pentru a crea noul rope ne-am folosit de funcția __concat,
  ce unește două noduri trimise ca parametru (rădăcinile rope-urilor
  primite);
  - Funcția __concat crează un nod ai cărui copii sunt cele două
  rădăcini primite și calculează greutatea sa.
  
-indexRope:
+<b>indexRope:</b>
  - Folosim funcția __indexRope, pornind de la rădăcina rope-ului
  și indexul primite.
  - Prin comparearea greutății nodului curent cu indexul căutat, mergem
@@ -31,12 +31,12 @@ indexRope:
  - În cazul în care am ajuns la poziția dorită, întoarcem caracterul de
  pe acea poziție.
  
-search:
+<b>search:</b>
  - Pentru întoarcerea șirului dintre cele două poziții primite, alocăm
  memorie pentru acesta și îl completăm caracter cu caracter folosind
  funcția indexRope.
  
-split:
+<b>split:</b>
  - Pentru împărțirea arborelui inițial este necesară o clonare a acestuia
  pentru a nu îl pierde la următorul apel. Acest lucru se realizează prin
  funcția __cloneNode care duplică arborele pornind de la rădăcină.
@@ -58,7 +58,7 @@ split:
  - Pentru împărțirea la început sau la final, practic nu se realizează
  nicio tăiere, deci tot arborele rămâne pe o singură parte a SplitPair-ului.
  
-insert:
+<b>insert:</b>
  - Pentru a insera un nou șir în rope pe poziția index, mai întâi cream un nou
  nod cu șirul precizat și împărțim rope-ul la poziția indicată.
  - Dacă adăugarea se află la mijlocul rope-ului, atunci sunt necesare două
@@ -68,11 +68,11 @@ insert:
  între noul nod și partea corespunzătoare a SplitPair-ului, pentru a păstra
  ordinea corectă a șirului.
  
-__freeNode:
+<b>__freeNode:</b>
  - Eliberăm un subarbore întreg pornind de la un nod printr-o parcurgere
  în postordine.
  
-delete:
+<b>delete:</b>
  - Pentru a șterge o parte din șirul de caractere la început sau la final,
  facem o singură împărțire a rope-ului pe poziția len și respectiv, start,
  ștergem partea ce trebuie eliminată și facem un nou rope cu partea rămasă.
@@ -81,4 +81,3 @@ delete:
  len a rope-ului nou format cu partea dreaptă a SplitPair-ului creat după
  prima împărțire. Se eliberează părțile ce trebuie eliminate și se formează
  rope-ul final prin concatenarea părților rămase din cele două SplitPair-uri.
- 
